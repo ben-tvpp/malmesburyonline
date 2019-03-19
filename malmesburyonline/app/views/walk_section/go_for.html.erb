@@ -6,9 +6,22 @@
   <div class="container">
     <%= image_tag 'walks/' +  ws.image %>
     <% @walk_section_buttons.each do |wsb| %>
-      <a href="<%= @base_url %>/<%= wsb.next_walk_section_id %>">
-      <button class="btnbotcen"><%= wsb.button_text %></button>
+      <a href="<%= @base_url %><%= wsb.next_walk_section_id %>">
+
+      <% 
+      c="btnbotcen"
+       
+      if      wsb.button_hor_pos == "L" then
+          c="btnbotlft"
+        elsif wsb.button_hor_pos == "R" then
+          c="btnbotrit"
+        end
+      %>
+
+      <button class="<%= c %>"><%= raw(wsb.button_text) %></button>
       </a>
+
+     <!-- V=<%= wsb.button_vert_pos %> H=<%= wsb.button_hor_pos %> class=<%= c %><br> -->
     <% end %>
   </div>
 
