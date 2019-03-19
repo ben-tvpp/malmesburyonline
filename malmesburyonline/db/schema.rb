@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_18_173423) do
+ActiveRecord::Schema.define(version: 2019_03_19_181730) do
 
   create_table "walk_section_buttons", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "walk_section_id"
+    t.bigint "next_walk_section_id"
+    t.string "button_text"
     t.string "button_type"
     t.string "button_vert_pos"
     t.string "button_hor_pos"
-    t.text "button_text"
     t.date "from"
     t.date "to"
-    t.bigint "walk_section_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "next_walk_section_id"
     t.index ["next_walk_section_id"], name: "fk_rails_3d5fa49e25"
     t.index ["walk_section_id"], name: "index_walk_section_buttons_on_walk_section_id"
   end

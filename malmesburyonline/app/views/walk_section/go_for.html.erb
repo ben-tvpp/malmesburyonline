@@ -3,11 +3,17 @@
 
 <% @walk_section.each do |ws| %>
 
-  <%= image_tag 'walks/' +  ws.image, style: 'height:auto;width:50%;' %>
+  <div class="container">
+    <%= image_tag 'walks/' +  ws.image %>
+    <% @walk_section_buttons.each do |wsb| %>
+      <a href="<%= @base_url %>/<%= wsb.next_walk_section_id %>">
+      <button class="btnbotcen"><%= wsb.button_text %></button>
+      </a>
+    <% end %>
+  </div>
 
 <% end %>
 
-<% @walk_section_buttons.each do |wsb| %>
-   <a href="<%= @base_url %>/<%= wsb.next_walk_section_id %>"><%= wsb.button_text %></a>   
-<% end %>
+
+
 
