@@ -1,6 +1,4 @@
 
-<h1><%= @walk[0]["name"] %></h1>
-
 <% @walk_section.each do |ws| %>
 
   <div class="container">
@@ -23,6 +21,7 @@
 
      <!-- V=<%= wsb.button_vert_pos %> H=<%= wsb.button_hor_pos %> class=<%= c %><br> -->
     <% end %>
+    <div class="top-left"><%= @walk[0]["name"] %></div>
   </div>
 
 <% end %>

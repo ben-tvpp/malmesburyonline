@@ -14,6 +14,20 @@
  *= require_self
  */
 
+ /* GO_FOR
+
+ /* Overlay text on image
+
+ /* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 25px;
+  font-weight: 900;
+  outline: 2px solid green;
+}
+
 /* Container needed to position the button. Adjust the width as needed */
 
 .container {
