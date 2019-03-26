@@ -19,6 +19,8 @@
  /* Overlay text on image
 
  /* Top left text */
+ 
+
 .top-left {
   position: absolute;
   top: 8px;
@@ -47,32 +49,10 @@
 
 /* Style the button and place it in the middle of the container/image */
 
-.container .btnbotcen {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: rgba(14, 226, 163, 0.3);
-  color: white;
-  font-size: 150%;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.container .btnbotcen:hover {
-  background-color: rgba(52, 124, 103, 0.5);
-  font-size: 170%;
-}
-
 /* Style the button and place it in the middle of the container/image */
 
-.container .btnbotlft {
+.container .but01 {
   position: absolute;
-  top: 80%;
-  left: 20%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: rgba(14, 226, 163, 0.3);
@@ -84,27 +64,7 @@
   border-radius: 5px;
 }
 
-.container .btnbotlft:hover {
+.container .but01:hover {
   background-color: rgba(52, 124, 103, 0.5);
-}
-
-/* Style the button and place it in the middle of the container/image */
-
-.container .btnbotrit {
-  position: absolute;
-  top: 80%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: rgba(14, 226, 163, 0.3);
-  color: white;
-  font-size: 150%;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.container .btnbotrit:hover {
-  background-color: rgba(52, 124, 103, 0.5);
+  outline: 2px solid black;
 }

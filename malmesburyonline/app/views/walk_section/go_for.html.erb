@@ -1,31 +1,30 @@
 
 <% @walk_section.each do |ws| %>
-
   <div class="container">
     <%= image_tag 'walks/' +  ws.image %>
+    <div class="top-left"><%= @walk[0]["name"] %></div>
     <% @walk_section_buttons.each do |wsb| %>
       <a href="<%= @base_url %><%= wsb.next_walk_section_id %>">
+        <% 
 
-      <% 
-      c="btnbotcen"
-       
-      if      wsb.button_hor_pos == "L" then
-          c="btnbotlft"
-        elsif wsb.button_hor_pos == "R" then
-          c="btnbotrit"
+        if    wsb.button_vert_pos == "T" then
+            top=20
+          elsif wsb.button_vert_pos == "M" then
+            top=50
+          else # "B"
+            top=80
         end
-      %>
-
-      <button class="<%= c %>"><%= raw(wsb.button_text) %></button>
+       
+        if    wsb.button_hor_pos == "L" then
+          left=20
+        elsif wsb.button_hor_pos == "R" then
+          left=80
+        else  # "C"
+          left=50
+        end
+        %>
+        <button class="but01" style="left:<%= left %>%; top:<%= top %>%;"><%= raw(wsb.button_text) %></button>
       </a>
-
-     <!-- V=<%= wsb.button_vert_pos %> H=<%= wsb.button_hor_pos %> class=<%= c %><br> -->
     <% end %>
-    <div class="top-left"><%= @walk[0]["name"] %></div>
   </div>
-
 <% end %>
-
-
-
-
